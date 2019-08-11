@@ -1,0 +1,21 @@
+﻿<Window x:Class="Ping_test.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ping_test"
+        mc:Ignorable="d"
+        Title="Ping test" Height="600" Width="600" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="61*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="outputTextBlock" Grid.Column="0" Grid.Row="0" Text="Odpowiedzi PING:" HorizontalAlignment="Center" Height="250" Margin="21,20,21,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="550" Background="Black" Foreground="#FF0AE7F1" FontSize="14" IsReadOnly="True" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="true" Grid.ColumnSpan="2"/>
+        <Label Grid.Column="0" Content="Czas który upłynął od rozpoczęcia testu" HorizontalAlignment="Center" Height="30" Margin="21,290,21,0" VerticalAlignment="Top" Width="550" Grid.ColumnSpan="2"/>
+        <ProgressBar x:Name="progressBar" Grid.Column="0" HorizontalAlignment="Center" Height="40" Margin="21,330,21,0" VerticalAlignment="Top" Width="550" LargeChange="7" Grid.ColumnSpan="2"/>
+        <Label Grid.Column="0" Content="Adres do testowania PING" HorizontalAlignment="Center" Height="30" Margin="21,420,21,0" VerticalAlignment="Top" Width="550" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="inputTextBox" Grid.Column="0" Text="google.com" HorizontalAlignment="Left" Height="40" Margin="20,450,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Grid.ColumnSpan="2" FontSize="20" Foreground="#FF858383" FontWeight="Bold"/>
+        <Button x:Name="submitButton" Grid.Column="1" HorizontalAlignment="Right" Height="40" Margin="0,450,20,0" VerticalAlignment="Top" Width="250" Click="Button_Click"/>
+    </Grid>
+</Window>
