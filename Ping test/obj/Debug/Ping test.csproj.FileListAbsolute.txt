@@ -13,3 +13,4 @@ C:\Users\Michaa\source\repos\Ping test\Ping test\obj\Debug\Ping test.exe
 C:\Users\Michaa\source\repos\Ping test\Ping test\obj\Debug\Ping test.pdb
 C:\Users\Michaa\source\repos\Ping test\Ping test\obj\Debug\Views\MainWindow.g.cs
 C:\Users\Michaa\source\repos\Ping test\Ping test\obj\Debug\Views\MainWindow.baml
+C:\Users\Michaa\source\repos\Ping test\Ping test\obj\Debug\GeneratedInternalTypeHelper.g.cs

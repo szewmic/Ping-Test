@@ -5,12 +5,12 @@ using System.Threading.Tasks;
 
 namespace Ping_test.Domain
 {
-    public class Test
+    public class PingTest
     {
-        private static Test uniqueTest = new Test();
-        private CancellationTokenSource _stopWorkingCts;
+        public int Duration { get; private set; }
 
-        private int testDuration;
+        private static PingTest uniqueTest = new PingTest();
+        private CancellationTokenSource _stopWorkingCts;
         public int ProgressTicksInSec { get; private set; }
         public int ProgressTickDelay { get; private set; }
 
@@ -18,14 +18,15 @@ namespace Ping_test.Domain
         public int DelayBewteenPings { get; private set; }
 
 
-        private Test() {
+        private PingTest() {
+            Duration = 7;
             ProgressTicksInSec = 10;
             PingTimeout = 5000;
             ProgressTickDelay = 100;
             DelayBewteenPings = 300;
         }
 
-        public static Test getInstace()
+        public static PingTest getInstace()
         {
             return uniqueTest;
         }
@@ -34,7 +35,7 @@ namespace Ping_test.Domain
         {
             _stopWorkingCts = new CancellationTokenSource();
             string result = "";
-            var msDuration = testDuration * 1000;
+            var msDuration = Duration * 1000;
 
             try
             {
@@ -91,7 +92,7 @@ namespace Ping_test.Domain
 
         private void UpdatePgBar(IProgress<double> progress)
         {
-            var ticks = testDuration * ProgressTicksInSec;
+            var ticks = Duration * ProgressTicksInSec;
 
             for (int i = 1; i <= ticks; i++)
             {
@@ -100,9 +101,5 @@ namespace Ping_test.Domain
             }
         }
 
-        public void SetDuration(int duration)
-        {
-            this.testDuration = duration;
-        }
     }
 }
