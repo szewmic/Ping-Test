@@ -64,11 +64,11 @@ namespace Ping_test.ViewModels
         private double progress;
         public double Progress
         {
-            get { return progress; }
+            get { return _test.Progres; }
             set
             {
-                if (progress == value) return;
-                progress = value;
+                if (_test.Progres == value) return;
+                _test.Progres = value;
                 RaisePropertyChanged();
             }
         }

@@ -17,6 +17,7 @@ namespace Ping_test.Domain
         public int PingTimeout { get; private set; }
         public int DelayBewteenPings { get; private set; }
 
+        public double Progres { get; set; }
 
         private PingTest() {
             Duration = 7;
@@ -96,7 +97,8 @@ namespace Ping_test.Domain
 
             for (int i = 1; i <= ticks; i++)
             {
-                progress.Report(i);
+               // progress.Report(i);
+                Progres = i;
                 Thread.Sleep(ProgressTickDelay);
             }
         }
